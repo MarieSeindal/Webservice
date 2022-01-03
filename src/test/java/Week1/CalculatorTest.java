@@ -40,4 +40,15 @@ class CalculatorTest {
         assertEquals(expected, actual, "Many numbers");
     }
 
+    @Test
+    void addDelimiter(){
+        int expected = 50;
+        Calculator calc = new Calculator();
+        int actual = calc.add("//g\n10g10g10\n10,10");
+
+        assertEquals(expected, actual, "Delimiter + Many numbers");
+    }
+
+
+
 }
