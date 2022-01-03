@@ -18,6 +18,15 @@ public class Calculator {
                     workstring =numbers.split("\n");
 
                 return Integer.parseInt(workstring[0]) + Integer.parseInt(workstring[1]);
+            default:
+                String workstring2[] = numbers.split(",|\n");
+
+                int sum =0;
+
+                for (String a : workstring2) {
+                    sum+= Integer.parseInt(a);
+                }
+                return sum;
 
         }
 
