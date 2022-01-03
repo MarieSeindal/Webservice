@@ -22,14 +22,22 @@ class CalculatorTest {
 
         assertEquals(expected, actual, "1 number");
     }
-
     @Test
     void add0() {
         int expected = 0;
         Calculator calc = new Calculator();
         int actual = calc.add("");
 
-        assertEquals(expected, actual, "1 number");
+        assertEquals(expected, actual, "0 number");
+    }
+
+    @Test
+    void addMany() {
+        int expected = 50;
+        Calculator calc = new Calculator();
+        int actual = calc.add("10,10,10,10,10");
+
+        assertEquals(expected, actual, "Many numbers");
     }
 
 }

@@ -3,17 +3,21 @@ package Week1;
 public class Calculator {
 
     public int add(String numbers){
-        int value =0;
 
         switch (numbers.length()){
             case 0:
                 break;
             case 1:
-                value = Integer.parseInt(numbers);
-                return value;
+                return Integer.parseInt(numbers);
             case 3:
-                numbers.split(",");
+                String workstring[] = new String[2];
 
+                if (numbers.contains(","))
+                    workstring = numbers.split(",");
+                else if (numbers.contains("\n"))
+                    workstring =numbers.split("\n");
+
+                return Integer.parseInt(workstring[0]) + Integer.parseInt(workstring[1]);
 
         }
 
