@@ -8,7 +8,12 @@ class CalculatorTest {
 
     @Test
     void add() {
-        System.out.println("Test ran");
-        fail("Not implemented yet");
+        int expected = 3;
+        Calculator calc = new Calculator();
+        int actual = calc.add(1,2);
+
+
+        assertEquals(expected, actual);
     }
+
 }
