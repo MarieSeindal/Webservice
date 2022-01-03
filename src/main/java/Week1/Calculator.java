@@ -6,13 +6,16 @@ public class Calculator {
 
         String delimiter = " ";
         String splitter[];
-        if (numbers.contains("\\\\")) {
+        if (numbers.contains("//")) {
             splitter = numbers.split("\n");
-            delimiter = splitter[0].replaceAll("\\\\", "");
+            delimiter = splitter[0].replaceAll("//", "");
+
+            String clearDelimiter = "//"+delimiter+"\n";
+            numbers = numbers.replaceFirst(clearDelimiter, "");
         }
         String allDelimiters = ",|\n|" + delimiter;
 
-        if (numbers.isEmpty()){
+        if (numbers.equals("")){
             return 0;
 
         }else if(numbers.contains(",") | numbers.contains("\n") | numbers.contains(delimiter)) { //Tjek for delimiters, aka flere tal
