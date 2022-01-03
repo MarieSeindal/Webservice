@@ -25,7 +25,13 @@ public class Calculator {
             int sum =0;
 
             for (String a : workstring) {
-                sum+= Integer.parseInt(a);
+                int aNumber = Integer.parseInt(a);
+                if (aNumber < 0){
+                    System.out.println("Error negative number: " +aNumber);
+                    continue;
+                }
+
+                sum+= aNumber;
             }
             return sum;
 

@@ -49,6 +49,13 @@ class CalculatorTest {
         assertEquals(expected, actual, "Delimiter + Many numbers");
     }
 
+    @Test
+    void addNegative(){
+        int expected = 20;
+        Calculator calc = new Calculator();
+        int actual = calc.add("-10,10,-10,10,-10");
+
+        assertEquals(expected, actual, "Negative + Many numbers");    }
 
 
 }
